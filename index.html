@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ONGS SJC</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #00000080;
+      color: #2b2b2b;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 0 10px;
+
+      background-image: url("imagens/Bg.jpg");
+      background-size: cover;     /* cobre todo o espaço */
+      background-position: center; /* centraliza a imagem */
+      border-radius: 8px;          /* opcional: cantos arredondados */
+      height: 230px;               /* define altura */
+}
+
+    /* Logo placeholder */
+    .logo-placeholder {
+      width: 100px;         /* largura do círculo */
+      height: 100px;        /* altura do círculo */
+      border-radius: 50%;   /* transforma em círculo */
+      overflow: hidden;     /* esconde partes da imagem que ultrapassam o círculo */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-placeholder img {
+      width: 130%;          /* faz a imagem preencher o círculo */
+      height: 130%;        
+      object-fit: cover;
+    }
+
+    /* Diamond  placeholder */
+    .diamond-placeholder {
+      width: 130px;
+      height: 130px;
+      background: #f6f6f665;
+      color: #111827;
+      font-weight: 700;
+      font-size: 1rem;
+      border: 2px solid #F6F6F6;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+       margin-right: 20px;
+      transform: rotate(45deg);
+      user-select: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: default;
+    }
+    /* Text dentro da logo diamante */
+    .diamond-placeholder span {
+      transform: rotate(-45deg);
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 0 5px;
+      line-height: 1.2;
+      font-family: "Sansation Light", sans-serif;
+      font-size: 30px;
+      font-weight: 300;
+      color: #111827;
+    }
+
+    /* informações dos cards */
+    .subtitle {
+      max-width: 900px;
+      text-align: center;
+      font-size: 1.50rem;
+      margin-bottom: 40px;
+      padding: 0 10px;
+      color: #ffffff;
+    }
+
+    /* Cards */
+    .cards {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 60px;
+      padding: 0 10px 40px;
+    }
+
+    /* card individual */
+    .card {
+      background: #dbdbe6;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    .card:hover,
+    .card:focus {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transform: translateY(-4px);
+      outline: none;
+    }
+
+    /* Card titulo */
+    .card-title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #000000;
+    }
+
+    /* Card descrição*/
+    .card-desc {
+      font-size: 1rem;
+      color: #000000;
+      white-space: pre-line;
+      flex-grow: 1;
+    }
+
+    /* ajustes responsivos */
+    @media (max-width: 400px) {
+      .diamond-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 0.85rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      @font-face {
+        font-family: "Sansation Light";
+        src: url("fonts/Sansation_Light.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-placeholder" aria-label="Logo placeholder">
+      <img src="imagens\logo.jpg" alt="Imagem">
+    </div>
+    <div class="diamond-placeholder" aria-label="ONGS SJC">
+      <span>ONGS<br>SJC</span>
+    </div>
+  </header>
+
+  <p class="subtitle">
+    Conecte-se com ONGs em São José dos Campos e faça a diferença em sua comunidade. Encontre uma causa que te motive e
+    comece a ajudar hoje mesmo!
+  </p>
+  
+  <main class="cards" role="list">
+    <a href="https://site.siteargus.com.br/678/index/678" class="card" role="listitem" target="_blank"
+      rel="noopener noreferrer">
+      <h2 class="card-title">ONG Exemplo 1</h2>
+      <p class="card-desc">
+        Endereço: XXX<br />
+        Telefone: XX-XXXXX-XXXX<br />
+        Email: contato@ongexemplo.org
+      </p>
+    </a>
+  
+    <a href="https://associacaobemtevi.org.br/" class="card" role="listitem" target="_blank" rel="noopener noreferrer">
+      <h2 class="card-title">ONG Exemplo 2</h2>
+      <p class="card-desc">
+        Endereço: xxxxx<br />
+        Telefone: X-XXXXX-XXXX<br />
+        Email: contato@ongexemplo.org
+      </p>
+    </a>
+  
+    <a href="https://gaiasjc.org.br/" class="card" role="listitem" target="_blank" rel="noopener noreferrer">
+      <h2 class="card-title">ONG Exemplo 3</h2>
+      <p class="card-desc">
+        Endereço: xxxxx<br />
+        Telefone: X-XXXXX-XXXX<br />
+        Email: contato@ongexemplo.org
+      </p>
+    </a>
+  
+    <a href="https://doe.gapc.org.br/" class="card" role="listitem" target="_blank" rel="noopener noreferrer">
+      <h2 class="card-title">ONG Exemplo 4</h2>
+      <p class="card-desc">
+        Endereço: xxxxx<br />
+        Telefone: X-XXXXX-XXXX<br />
+        Email: contato@ongexemplo.org
+      </p>
+    </a>
+  
+    <a href="https://amma.org.br/" class="card" role="listitem" target="_blank" rel="noopener noreferrer">
+      <h2 class="card-title">ONG Exemplo 5</h2>
+      <p class="card-desc">
+        Endereço: xxxx<br />
+        Telefone: X-XXXXX-XXXX<br />
+        Email: contato@ongexemplo.org
+      </p>
+    </a>
+  
+    <a href="https://mapaosc.ipea.gov.br/#" class="card" role="listitem" target="_blank" rel="noopener noreferrer">
+      <h2 class="card-title">ONG Exemplo 6</h2>
+      <p class="card-desc">
+        Endereço: xxxx<br />
+        Telefone: X-XXXXX-XXXX<br />
+        Email: contato@ongexemplo.org
+      </p>
+    </a>
+  
+    <a href="https://www.instagram.com/adotapetsjc/" class="card" role="listitem" target="_blank"rel="noopener noreferrer">
+      <h2 class="card-title">ONG Exemplo 7</h2>
+      <p class="card-desc">
+        Endereço: xxxx<br />
+        Telefone: X-XXXXX-XXXX<br />
+        Email: contato@ongexemplo.org
+        </p>
+    </a>
+     
+     <a href="https://doasaojose.com.br/" class="card" role="listitem" target="_blank" rel="noopener noreferrer">
+      <h2 class="card-title">ONG Exemplo 8</h2>
+      <p class="card-desc">
+        Endereço: xxxx<br />
+        Telefone: X-XXXXX-XXXX<br />
+        Email: contato@ongexemplo.org
+      </p>
+    </a>
+    
+    <!-- adicionar mais se precisar quando der -->
+  </main>
+</body>
+</html>
